@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="./css/project27.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="js/project27.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="month">
+                <h3 id="month-year">july 2024</h3>
+            </div>
+            <div id="btns">
+                <button id="btnleft"><i class="fa fa-angle-left"></i></button>
+                <button id="btnright"><i class="fa fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div id="weekdays">
+            <div>sun</div>
+            <div>mon</div>
+            <div>tue</div>
+            <div>wed</div>
+            <div>thu</div>
+            <div>fri</div>
+            <div>sat</div>
+        </div>
+        <div id="calender">
+        </div>
+    </div>
+    <div id="modal"></div>
+    <div id="addevent">
+        <h4>add event</h4>
+        <input type="text" placeholder="Event title" id="inputdata" autocomplete="off">
+        <div>
+            <button id="btnsave">save</button>
+            <button class="btnclose">close</button>
+        </div>
+    </div>
+    <div id="viewevent">
+        <h4>Event</h4>
+        <p id="text">this is sample event</p>
+        <div>
+            <button id="btndelete">delete</button>
+            <button class="btnclose">close</button>
+        </div>
+    </div>
+</body>
+</html>
