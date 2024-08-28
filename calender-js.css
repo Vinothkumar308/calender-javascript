@@ -1,0 +1,165 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
+*{
+    margin:0;
+    padding:0;
+    font-family:poppins;
+}
+body{
+    width:100vw;
+    height:100vh;
+    background-color:rgb(241, 53, 53);
+    display:grid;
+    place-items:center;
+}
+#container{
+    width:845px;
+    background-color: white;
+}
+#container #header{
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header h3{
+    color:rgb(241, 53, 53);
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase
+}
+#header button{
+    width:60px;
+    padding:3px 10px;
+    border-radius: 3px;
+    background-color:rgb(241, 53, 53);
+    color:white;
+    border:none;
+}
+#weekdays{
+    display:flex;
+    justify-content: space-between;
+    background-color: black;
+    margin-top:10px;
+}
+#weekdays div{
+    font-size:18px;
+    font-weight:500;
+    padding:10px;
+    width:100%;
+    text-align: center;
+    text-transform:uppercase;
+    color:white;
+}
+#calender{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    margin: auto;
+}
+#calender .day{
+    width:100px;
+    height:100px;
+    margin:10px;
+    text-align: center;
+    font-weight:400;
+    font-size:18px;
+    box-shadow: 3px 3px 5px whitesmoke,-3px -3px 5px whitesmoke;
+    border:none;
+    border-radius: 3px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    overflow: hidden; 
+    padding-bottom:2px; 
+}
+#calender .day:hover{
+    cursor:pointer;
+    background-color: rgb(216, 213, 213);
+}
+#current-day{
+    background-color:rgb(142, 57, 223);
+}
+.event ,.holiday{
+    font-size: 10px;
+    color:white;
+    max-height:50px;
+    text-transform: uppercase;
+    padding:5px;
+    background-color: black;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    display:none;
+} 
+.holiday{
+    background-color: rgb(29, 226, 29);
+    color:black;
+    font-size:12px;
+    
+}
+.plain{
+    cursor:default;
+    box-shadow: none;
+    
+}
+#modal{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index:10;
+    display:none;
+}
+#addevent,#viewevent{
+    z-index:20;
+    position:absolute;
+    background-color: white;
+    padding:15px;
+    width:320px;
+    display:none;
+}
+#addevent h4,#viewevent h4{
+    text-transform: capitalize;
+    font-size:18px;
+    margin-bottom: 10px;
+}
+#addevent input{
+    padding:5px;
+    outline:none;
+    font-size:16px;
+    border-radius: 3px;
+    width:100%;
+    box-sizing: border-box;
+    border:1px solid grey;
+}
+#addevent button,#viewevent button{
+    margin-top: 20px;
+    padding:7px 25px;
+    font-size:15px;
+    font-weight: 400;
+    border-radius: 3px;
+    cursor:pointer;
+    border:none;
+    text-transform: capitalize;
+}
+#addevent #btnsave{
+    background-color: #13ee13e0;
+    color:white;
+}
+#addevent,#viewevent .btnclose{
+    background-color:black;
+    color:white;
+    margin-left:6px;
+}
+#viewevent #btndelete{
+    background-color: red;
+    color: white;
+}
+#viewevent p{
+    margin:8px;
+}
+.plain:hover{
+    background-color: white !important;
+}
